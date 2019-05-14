@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: zuul-service
+server:
+  port: 8765
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+   eureka-client: /eureka-client/**
+   eureka-client-order: /eureka-client-order/**
+   load-balancer: /load-balancer/**
+
+# routes to serviceId

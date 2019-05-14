@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka-client
+server:
+  port: 8760
+
+eureka:
+  client:
+    service-url:
+          defaultZone: http://localhost:8761/eureka/
+  instance:
+#   移除服务时间
+    lease-expiration-duration-in-seconds: 30
+#    每隔多久发送心跳
+    lease-renewal-interval-in-seconds: 50
